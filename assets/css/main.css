@@ -157,7 +157,8 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.75em;
-		line-height: 1.5em;
+		line-height: 1.5em;		
+		text-align: center;
 	}
 
 	h4 {
@@ -1778,6 +1779,7 @@ input, select, textarea {
 		font-size: 1.1em;
 		margin-top: -0.35em;
 		line-height: 1.5em;
+		text-align: center;
 	}
 
 	header h4 + p,
@@ -3125,6 +3127,7 @@ input, select, textarea {
 
 			h3 {
 				font-size: 1.5em;
+				text-align: center;
 			}
 
 			h4 {
