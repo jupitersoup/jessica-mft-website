@@ -250,6 +250,7 @@
  										<li><input type="reset" value="Reset Form" /></li>
  									</ul>
  								</div>
+ 								<input type="hidden" name="_next" value="https://jessicacarlisi.com/index.html?submission_status=success#contact-booking">
  								<input type="hidden" name="_subject" value="New therapy request">
  							</div>
  						</form>
@@ -283,17 +284,28 @@
  			<script src="assets/js/util.js"></script>
  			<script src="assets/js/main.js"></script>
  			<script>
- 				function showNotification() {
- 					// Get the snackbar DIV
- 					var x = document.getElementById("snackbar");
- 
- 					// Add the "show" class to DIV
- 					x.className = "show";
- 
- 					// After 3 seconds, remove the show class from DIV
- 					// After 60 seconds, remove the show class from DIV
- 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+ 				function showSuccessToast() {
+ 					const snackbar = document.getElementById("snackbar");
+ 					if (snackbar) {
+ 						snackbar.textContent = "Thanks for reaching out! I've received your message and I will respond to you within 48 hours.";
+ 						snackbar.className = "show"; // Ensure no 'error' class
+ 						setTimeout(function() {
+ 							snackbar.className = snackbar.className.replace("show", "");
+ 						}, 6000); // Toast duration to 6 seconds
+ 					}
  				}
+ 
+ 				document.addEventListener('DOMContentLoaded', function() {
+ 					const params = new URLSearchParams(window.location.search);
+ 					if (params.get('submission_status') === 'success') {
+ 						showSuccessToast();
+ 						// Clean the URL to prevent toast on refresh, without full reload
+ 						if (window.history.replaceState) {
+ 							const cleanURL = window.location.pathname + window.location.hash; // Keep the hash for scrolling
+ 							window.history.replaceState({ path: cleanURL }, '', cleanURL);
+ 						}
+ 					}
+ 				});
  			</script>
  
  	</body>
