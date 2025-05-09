@@ -22,12 +22,12 @@
  			</header>
  			<nav id="nav">
  				<ul>
- 					<li><a href="#two">ABOUT ME</a></li>
- 					<li><a href="#three">MY APPROACH</a></li>
- 					<li><a href="#four">OFFERINGS</a></li>
- 					<li><a href="#five">LOCATIONS</a></li>
- 					<li><a href="#six">FEES</a></li>
- 					<li><a href="#seven">CONTACT & BOOKING</a></li>
+ 					<li><a href="#about-me">ABOUT ME</a></li>
+ 					<li><a href="#my-approach">MY APPROACH</a></li>
+ 					<li><a href="#offerings">OFFERINGS</a></li>
+ 					<li><a href="#locations">LOCATIONS</a></li>
+ 					<li><a href="#fees">FEES</a></li>
+ 					<li><a href="#contact-booking">CONTACT & BOOKING</a></li>
  				</ul>
  			</nav>
  		</section>
@@ -49,7 +49,7 @@
  
  							<p>Somatic psychotherapy in Brisbane <br>or online for anyone across Australia </p>
  							<div>
- 								<input type="button" class="primary" value="Book a consultation" onclick="document.getElementById('six').scrollIntoView();" />
+ 								<input type="button" class="primary" value="Book a consultation" onclick="document.getElementById('contact-booking').scrollIntoView();" />
  							</div>
  					</header>
  
@@ -57,7 +57,7 @@
  				</section>
  
  				<!-- Two -->
- 				<section id="two">
+ 				<section id="about-me">
  					<div class="container">
  						<h3>About Me</h3>
  						<div class="features">
@@ -88,7 +88,7 @@
  				</section>
  
  				<!-- Three -->
- 				<section id="three">
+ 				<section id="my-approach">
  					<div class="container">
  						<h3>My Approach</h3>
  						<h4>Creating Safety</h4>
@@ -101,7 +101,7 @@
  				</section>
  
  				<!-- Four -->
- 				<section id="four">
+ 				<section id="offerings">
  					<div class="container">
  						<h3>Offerings</h3>
  						<p>I work with adults and couples of various ages and life stages. While I regularly support people navigating anxiety, depression, anger, grief, and general life stress, many benefit from my additional expertise with the following concerns:</p>
@@ -167,7 +167,7 @@
  				</section>
  
  				<!-- Five -->
- 				<section id="five">
+ 				<section id="locations">
  					<div class="container">
  						<h3>Locations and Availability</h3>
  						<p align="center">I currently work from two locations in Greenslopes and Ashgrove. Jessica Carlisi Psychotherapy, based at Greenslopes Psychology, is my independently run practice where I manage all aspects of your care, including scheduling, fees, and communication. I'm also part of the Fitzgerald Therapy team in Ashgrove, where bookings and fees are handled by their admin team. If you're unsure which setting might suit you best, feel free to get in touch — I'm happy to talk through the options with you.</p>
@@ -197,7 +197,7 @@
  				</section>
  
  				<!-- Six -->
- 				<section id="six">
+ 				<section id="fees">
  					<div class="container">
  						<h3>Fees</h3>
  						<p align="center">All fees are in AUD and inclusive of GST.</p>
@@ -227,15 +227,17 @@
  				</section>
  
  				<!-- Seven -->
- 				<section id="seven">
+ 				<section id="contact-booking">
  					<div class="container">
  						<h3>Contact & Booking</h3>
  						<h4>Contact</h4>
  						<p>Email: therapy@jessicacarlisi.com <br>Phone: 0438 156 339 <br>Instagram: @somatictherapybrisbane</p>
  						<h4>Booking</h4>
- 						<p>If you have any questions or would like to see if we would be a good fit, please schedule a free 30-minute consultation by filling out the form below, sending me an email to the above email address, or clicking the Halaxy booking button below. Please include your name, phone number, email address, and any details about your needs you'd like to share. If filling out the form below, please add my email to your safe senders list and check your spam folder in the week following your submission. <br><br>If you fill out the submission form below and don't hear from me within 3 days, please email me directly at therapy@jessicacarlisi.com or send me a text at 0438 156 339. Though rare, sometimes form submissions don't come through due to technical snags.</p>
-       <a href="https://www.halaxy.com/book/psychotherapist/jessica-carlisi/1176151/933781"><img src="https://cdn.halaxy.com/h/images/logo.png" /></a>
- 						<form method="post" action="https://formsubmit.co/forms@jessicacarlisi.com" method="POST"><br>
+ 						<p>If you have any questions or would like to see if we would be a good fit, please schedule a free 30-minute consultation by filling out the form below, sending me an email to the above email address, or clicking the Halaxy booking button below. Please include your name, phone number, email address, and any details about your needs you'd like to share. If filling out the form below, please add my email to your safe senders list and check your spam folder in the week following your submission. <br><br>If you fill out the submission form below and don't hear from me within 3 days, please email me directly or send me a text.</p>
+      <div style="text-align: center; margin-bottom: 1em;">
+       <a href="https://www.halaxy.com/book/psychotherapist/jessica-carlisi/1176151/933781" class="button primary icon solid fa-calendar-check" style="display: inline-flex; align-items: center;">Book with <img src="https://cdn.halaxy.com/h/images/logo.png" alt="Halaxy Logo" style="vertical-align: middle; height: 1.5em; margin-left: 0.5em;" /></a>
+      </div>
+ 						<form id="contactForm" action="https://formsubmit.co/forms@jessicacarlisi.com" method="POST"><br>
  							<div class="row gtr-uniform">
  								<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required /></div>
  								<div class="col-6 col-12-xsmall"><input type="tel" name="phone" id="phone" placeholder="Phone" required /></div>
@@ -248,7 +250,6 @@
  										<li><input type="reset" value="Reset Form" /></li>
  									</ul>
  								</div>
- 								<input type="hidden" name="_next" value="https://jessicacarlisi.com/index.html">
  								<input type="hidden" name="_subject" value="New therapy request">
  							</div>
  						</form>
@@ -282,7 +283,7 @@
  			<script src="assets/js/util.js"></script>
  			<script src="assets/js/main.js"></script>
  			<script>
- 				function myFunction() {
+ 				function showNotification() {
  					// Get the snackbar DIV
  					var x = document.getElementById("snackbar");
  
