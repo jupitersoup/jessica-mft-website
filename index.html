@@ -27,7 +27,7 @@
  					<li><a href="#offerings">OFFERINGS</a></li>
  					<li><a href="#locations">LOCATIONS</a></li>
  					<li><a href="#fees">FEES</a></li>
- 					<li><a href="#contact-booking">CONTACT & BOOKING</a></li>
+ 					<li><a href="#booking-contact">BOOKING & CONTACT</a></li>
  				</ul>
  			</nav>
  		</section>
@@ -49,7 +49,7 @@
  
  							<p>Somatic psychotherapy in Brisbane <br>or online for anyone across Australia </p>
  							<div>
- 								<input type="button" class="primary" value="Book a consultation" onclick="document.getElementById('contact-booking').scrollIntoView();" />
+ 								<input type="button" class="primary" value="Book a consultation" onclick="document.getElementById('booking-contact').scrollIntoView();" />
  							</div>
  					</header>
  
@@ -175,17 +175,17 @@
  							<div class="col-6 col-12-xsmall">
  								<h4 align="center">Jessica Carlisi Psychotherapy</h4>
  								<ul class="alt">
- 									<li>Location: <a href="https://g.co/kgs/sVK1SUU"><u>Greenslopes Psychololgy, 749 Logan Road, Greenslopes QLD 4120</u></a></li>
+ 									<li>Location: <a href="https://g.co/kgs/sVK1SUU">Greenslopes Psychololgy, 749 Logan Road, Greenslopes QLD 4120</a></li>
  									<li>Availablity: Wednesdays (in person or telehealth, availability after 5pm), Thursdays (telehealth only)</li>
  									<li>Fees: Outlined below</li>
- 									<li>Booking: Directly through this website</li>
-          <li>Accessibility: This space is not accessible for those with limited mobility, as use of stairs is required</li>
+ 									<li>Booking: <a href="https://www.halaxy.com/book/psychotherapist/jessica-carlisi/1176151/933781">Book with Halaxy</a></li>
+ 									<li>Accessibility: This space is not accessible for those with limited mobility, as use of stairs is required</li>
  								</ul>
  							</div>
  							<div class="col-6 col-12-xsmall">
  								<h4 align="center"><a href="https://www.fitzgeraldtherapy.com.au/">Fitzgerald Therapy</a></h4>
  								<ul class="alt">
- 									<li>Location: <a href="https://maps.app.goo.gl/o8GUuFPEoYYWG4of7"><u>Fitzgerald Therapy, 369 Waterworks Road, Ashgrove QLD 4060</u></a></li>
+ 									<li>Location: <a href="https://maps.app.goo.gl/o8GUuFPEoYYWG4of7">Fitzgerald Therapy, 369 Waterworks Road, Ashgrove QLD 4060</a></li>
  									<li>Availablity: Tuesdays and Fridays (in person or telehealth, limited availability after 5pm on Tuesdays)</li>
  									<li>Fees: Set by Fitzgerald Therapy</li>
  									<li>Booking: Managed by their admin team</li>
@@ -227,16 +227,17 @@
  				</section>
  
  				<!-- Seven -->
- 				<section id="contact-booking">
+ 				<section id="booking-contact">
  					<div class="container">
- 						<h3>Contact & Booking</h3>
+ 						<h3>Booking & Contact</h3>
+ 						<h4>Booking</h4>
+ 						<p>If you are ready to take the next step, I'd love to hear from you. You can book a free 30-minute intro chat using the 'Book with Halaxy' button below or by emailing me at therapy@jessicacarlisi.com. In this chat, we'll get to know each other, talk through your therapy needs, and see if we would be a good fit.</p>
+ 						 <div style="text-align: center; margin-bottom: 1em;">
+ 						  <a href="https://www.halaxy.com/book/psychotherapist/jessica-carlisi/1176151/933781" class="button primary icon solid fa-calendar-check" style="display: inline-flex; align-items: center;">Book with <img src="https://cdn.halaxy.com/h/images/logo.png" alt="Halaxy Logo" style="vertical-align: middle; height: 1.5em; margin-left: 0.5em;" /></a>
+ 						 </div>
  						<h4>Contact</h4>
  						<p>Email: therapy@jessicacarlisi.com <br>Phone: 0438 156 339 <br>Instagram: @somatictherapybrisbane</p>
- 						<h4>Booking</h4>
- 						<p>If you have any questions or would like to see if we would be a good fit, please schedule a free 30-minute consultation by filling out the form below, sending me an email to the above email address, or clicking the Halaxy booking button below. Please include your name, phone number, email address, and any details about your needs you'd like to share. If filling out the form below, please add my email to your safe senders list and check your spam folder in the week following your submission. <br><br>If you fill out the submission form below and don't hear from me within 3 days, please email me directly or send me a text.</p>
-      <div style="text-align: center; margin-bottom: 1em;">
-       <a href="https://www.halaxy.com/book/psychotherapist/jessica-carlisi/1176151/933781" class="button primary icon solid fa-calendar-check" style="display: inline-flex; align-items: center;">Book with <img src="https://cdn.halaxy.com/h/images/logo.png" alt="Halaxy Logo" style="vertical-align: middle; height: 1.5em; margin-left: 0.5em;" /></a>
-      </div>
+ 						<p>If you have any questions, you are welcome to contact me at the above email or phone number. Alternatively, you can fill out the form below and I'll be in contact soon. Please add my email to your safe senders list and check your spam folder the week following your submission. If you don't hear from me within 3 days, please email me directly or send me a text.</p>
  						<form id="contactForm" action="https://formsubmit.co/forms@jessicacarlisi.com" method="POST"><br>
  							<div class="row gtr-uniform">
  								<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required /></div>
@@ -273,7 +274,7 @@
  
  		</div>
  
- 		<div id="snackbar">Thanks for reaching out! I've received your message and I will respond to you within 48 hours.</div>
+ 		<div id="snackbar">
  
  		<!-- Scripts -->
  			<script src="assets/js/jquery.min.js"></script>
@@ -287,11 +288,11 @@
  				function showSuccessToast() {
  					const snackbar = document.getElementById("snackbar");
  					if (snackbar) {
- 						snackbar.textContent = "Thanks for reaching out! I've received your message and I will respond to you within 48 hours.";
+ 						snackbar.textContent = "Thanks for reaching out! I've received your message and I will respond to you within 3 days.";
  						snackbar.className = "show"; // Ensure no 'error' class
  						setTimeout(function() {
  							snackbar.className = snackbar.className.replace("show", "");
- 						}, 6000); // Toast duration to 6 seconds
+ 						}, 15000); // Toast duration to 15 seconds
  					}
  				}
  

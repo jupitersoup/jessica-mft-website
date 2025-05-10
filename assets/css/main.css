@@ -8,7 +8,10 @@
 
 :root {
     --highlightColor: #FFC200;
-	--highlightTextColor: #094425
+	--highlightTextColor: #094425;
+	--linkColor: #005999; /* WCAG AA compliant blue on white bg */
+	--linkVisitedColor: #503570; /* WCAG AA compliant purple on white bg */
+	--linkFocusOutlineColor: #007bff; /* Common focus blue */
 }
 
 html, body, div, span, applet, object,
@@ -45,10 +48,10 @@ blockquote, q {
 	quotes: none;
 }
 
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
 
 table {
 	border-collapse: collapse;
@@ -114,14 +117,48 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 1px #e4e4e4;
-		color: inherit;
-		text-decoration: none;
+		/* border-bottom: solid 1px #e4e4e4; */ /* Removing border, relying on color and underline for distinction */
+		color: var(--linkColor);
+		text-decoration: underline; /* Standard underline for non-color cue */
+		text-decoration-color: var(--linkColor); /* Ensure underline color matches text */
+		-moz-transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		-webkit-transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		-ms-transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	}
 
+		a:visited {
+			color: var(--linkVisitedColor);
+			text-decoration-color: var(--linkVisitedColor);
+		}
+
 		a:hover {
-			border-bottom-color: transparent;
-			color: var(--highlightColor) !important;
+			color: var(--highlightTextColor); /* Using dark green for hover, good contrast */
+			text-decoration-color: var(--highlightTextColor);
+		}
+
+		a:active {
+			color: var(--highlightTextColor); /* Or a slightly different shade if desired */
+			position: relative;
+			top: 1px; /* Subtle click feedback */
+		}
+
+		a:focus { /* Fallback for older browsers that don't support :focus-visible */
+			outline: 2px solid var(--linkFocusOutlineColor);
+			outline-offset: 2px;
+			background-color: rgba(0, 123, 255, 0.1); /* Light background to complement outline */
+		}
+		
+		a:focus-visible { /* Modern focus styling for keyboard users */
+			outline: 2px solid var(--linkFocusOutlineColor);
+			outline-offset: 2px;
+			background-color: rgba(0, 123, 255, 0.1); /* Light background to complement outline */
+		}
+
+		/* Remove default focus style if :focus-visible is supported and not matching (to avoid double focus rings) */
+		a:focus:not(:focus-visible) {
+			outline: none;
+			background-color: transparent;
 		}
 
 	strong, b {
@@ -145,9 +182,10 @@ input, select, textarea {
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			border: 0;
-			color: inherit;
-			text-decoration: none;
+			border: 0; /* Keep border removal for heading links */
+			color: inherit; /* Heading links inherit heading color */
+			text-decoration: none; /* No underline for heading links by default */
+			text-decoration-color: inherit;
 		}
 
 	h2 {
@@ -3347,7 +3385,7 @@ input, select, textarea {
 	position: fixed; /* Sit on top of the screen */
 	z-index: 1; /* Add a z-index if needed */
 	left: 50%; /* Center the snackbar */
-	bottom: 30px; /* 30px from the bottom */
+	top: 30px; /* 30px from the top */
   }
   
   /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -3361,17 +3399,23 @@ input, select, textarea {
   
   /* Animations to fade the snackbar in and out */
   @-webkit-keyframes fadein {
-	from {bottom: 0; opacity: 0;}
-	to {bottom: 30px; opacity: 1;}
+	from {top: 0; opacity: 0;}
+	to {top: 30px; opacity: 1;}
   }
   
   @keyframes fadein {
-	from {bottom: 0; opacity: 0;}
-	to {bottom: 30px; opacity: 1;}
+	from {top: 0; opacity: 0;}
+	to {top: 30px; opacity: 1;}
   }
   
   @-webkit-keyframes fadeout {
-	from {bottom: 30px; opacity: 1;}
+	from {top: 30px; opacity: 1;}
+	to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+	from {top: 30px; opacity: 1;}
+	to {top: 0; opacity: 0;}
 	to {bottom: 0; opacity: 0;}
   }
   
