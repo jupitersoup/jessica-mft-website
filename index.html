@@ -6,13 +6,13 @@
  <html>
  	<head>
 		<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-52RL2N0J2B"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HX3ME8YKL1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-52RL2N0J2B');
+  gtag('config', 'G-HX3ME8YKL1');
 </script>
  		<title>Jessica Carlisi Somatic Psychotherapy</title>
  		<meta charset="utf-8" />
@@ -272,24 +272,41 @@
 						Phone: 0438 156 339 <br>
 						Instagram: <a href="https://www.instagram.com/somatictherapybrisbane/" target="_blank" style="color: #7a4a00; text-decoration: underline;">@somatictherapybrisbane</a></p>
  						<p>If you have any questions, you are welcome to contact me at the above email or phone number. Alternatively, you can fill out the form below and I'll be in contact soon. Please add my email to your safe senders list and check your spam folder the week following your submission. If you don't hear from me within 3 days, please email me directly or send me a text.</p>
- 						<form id="contactForm" action="https://formsubmit.co/forms@jessicacarlisi.com" method="POST"><br>
- 							<div class="row gtr-uniform">
- 								<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required /></div>
- 								<div class="col-6 col-12-xsmall"><input type="tel" name="phone" id="phone" placeholder="Phone" required /></div>
- 								<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" required /></div>
- 								<div class="col-6 col-12-xsmall"><input type="text" name="time" id="time" placeholder="Time and day available for consultation" required /></div>
- 								<div class="col-12"><textarea name="message" id="message" placeholder="Any specific details about your needs" rows="6"></textarea></div>
- 								<div class="col-12">
- 									<ul class="actions">
- 										<li><input type="submit" class="primary" value="Send Message" /></li>
- 										<li><input type="reset" value="Reset Form" /></li>
- 									</ul>
- 								</div>
- 								<input type="hidden" name="_next" value="https://jessicacarlisi.com/index.html?submission_status=success#contact-booking">
- 								<input type="hidden" name="_subject" value="New therapy request">
-								<input type="hidden" name="_captcha" value="false">
- 							</div>
- 						</form>
+<form action="https://formspree.io/f/your-form-id" method="POST" class="fs-form" target="_top" style="max-width: 600px; margin: 0 auto;">
+	<div class="fs-field">
+		<label class="fs-label" for="name">Full Name</label>
+		<input class="fs-input" id="name" name="name" type="text" required />
+	</div>
+	<div class="fs-field">
+		<label class="fs-label" for="email">Email</label>
+		<input class="fs-input" id="email" name="email" type="email" required />
+	</div>
+	<div class="fs-field">
+		<label class="fs-label" for="phone">Phone Number</label>
+		<input class="fs-input" id="phone" name="phone" type="tel" />
+	</div>
+	<div class="fs-field">
+		<label class="fs-label" for="message">Message</label>
+		<textarea class="fs-textarea" id="message" name="message" rows="5" required></textarea>
+	</div>
+	<div class="fs-button-group" style="display: flex; justify-content: flex-end;">
+		<button class="fs-button" type="submit" style="
+			background-color: #B85B1D;
+			color: #fff;
+			border: none;
+			border-radius: 30px;
+			padding: 0.75em 2em;
+			font-size: 1.1em;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 2px 8px rgba(122,74,0,0.15);
+			transition: background 0.2s, box-shadow 0.2s;
+		"
+		onmouseover="this.style.backgroundColor='#9c5c13';"
+		onmouseout="this.style.backgroundColor='#7a4a00';"
+		>Submit</button>
+	</div>
+</form>
  					</div>
  				</section>
  
